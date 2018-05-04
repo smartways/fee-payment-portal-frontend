@@ -112,16 +112,68 @@
                 </b-card>
             </b-col>
         </b-row>
+
+        <addschool v-if="showModal">
+            <div slot="header" class="m-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add New School</h5>
+                <button type="button" class="close pull-right" @click="closeModal" aria-label="Close">&times;
+                </button>
+            </div>
+
+            <div slot="body" class="m-body">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type:</label>
+                        <input type="text" class="form-control" id="type">
+                    </div>
+                    <div class="form-group">
+                        <label for="county">County:</label>
+                        <input type="text" class="form-control" id="county">
+                    </div>
+                    <div class="form-group">
+                        <label for="county">Postal Address:</label>
+                        <input type="text" class="form-control" id="postal_address">
+                    </div>
+                    <div class="form-group">
+                        <label for="county">Postal Code:</label>
+                        <input type="text" class="form-control" id="postal_code">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="number" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_name">Contact Name:</label>
+                        <input type="text" class="form-control input-lg" id="contact_name">
+                    </div>
+                </form>
+            </div>
+            <div slot="footer">
+                <button type="button" class="btn btn-outline-info" @click="closeModal()"> Close </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" @click="submitAndClose()">
+                    Submit
+                </button>
+            </div>
+        </addschool>
     </div>
 </template>
 <script>
   import Vue from 'vue'
   import pagination from 'vue-pagination-bootstrap'
-  import swal from 'sweetalert'
-
+  // import swal from 'sweetalert'
+  import Addschool from './modals/AddSchool.vue'
   export default{
     components: {
-      pagination: pagination
+      pagination: pagination,
+      addschool: Addschool
     },
     data () {
       return {
@@ -198,7 +250,8 @@
             'key': 'charset',
             'value': 'utf-8'
           }]
-        ]
+        ],
+        showModal: false
       }
     },
     watch: {
@@ -248,15 +301,26 @@
         alert(itemId)
       },
       createSchool () {
-        swal('Comming Soon', 'Please Wait')
+        // swal('Comming Soon', 'Please Wait')
+        this.openModal()
+      },
+      openModal () {
+        this.showModal = true
+      },
+      closeModal () {
+        this.showModal = false
+      },
+      submitAndClose () {
       }
     }
   }
 </script>
 <style>
-    /*.search-field{*/
-    /*border: 1px;*/
-    /*height: 40px;*/
-    /*}*/
+    .m-header{
+        width: 100%;
+    }
+    .m-body{
+        width: 100%;
+    }
 
 </style>

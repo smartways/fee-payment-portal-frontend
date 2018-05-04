@@ -10,48 +10,6 @@ export default {
       // }
     },
     {
-      name: 'Payments',
-      url: '/payments',
-      icon: 'icon-puzzle',
-      children: [
-        {
-          name: 'All Payments',
-          url: '/payments/payments',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Confirmed Payments',
-          url: '/payments/complete-payments',
-          icon: 'icon-puzzle'
-        }
-        // {
-        //   name: 'Cards',
-        //   url: '/components/cards',
-        //   icon: 'icon-puzzle'
-        // },
-        // {
-        //   name: 'Forms',
-        //   url: '/components/forms',
-        //   icon: 'icon-puzzle'
-        // },
-        // {
-        //   name: 'Modals',
-        //   url: '/components/modals',
-        //   icon: 'icon-puzzle'
-        // },
-        // {
-        //   name: 'Switches',
-        //   url: '/components/switches',
-        //   icon: 'icon-puzzle'
-        // },
-        // {
-        //   name: 'Tables',
-        //   url: '/components/tables',
-        //   icon: 'icon-puzzle'
-        // }
-      ]
-    },
-    {
       name: 'Schools',
       url: '/schools',
       icon: 'fa-university',

@@ -12,18 +12,13 @@ import JsonExcel from 'vue-json-excel'
 // import VueResource from 'vue-resource'
 import Vuetable from 'vuetable-2'
 import VueEvents from 'vue-events'
-
+Vue.use(BootstrapVue)
 Vue.use(VueEvents)
 Vue.use(Vuetable)
 Vue.component('downloadExcel', JsonExcel)
 Vue.use(VueAxios, axios)
-Vue.use(BootstrapVue)
 Vue.use(Auth)
 Vue.use(VeeValidate, {fieldsBagName: 'formFields'})
-
-// Vue.http.options.root = 'http://104.196.190.201:4567'
-// Vue.http.headers.common['API-KEY'] = 'jYrFZDJlt4s'
-// Vue.http.headers.common['Content-Type'] = 'application/json'
 
 router.beforeEach(
   (to, from, next) => {

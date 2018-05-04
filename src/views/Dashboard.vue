@@ -127,26 +127,13 @@
 </template>
 
 <script>
-import CardLine1ChartExample from './dashboard/CardLine1ChartExample'
-import CardLine2ChartExample from './dashboard/CardLine2ChartExample'
-import CardLine3ChartExample from './dashboard/CardLine3ChartExample'
-import CardBarChartExample from './dashboard/CardBarChartExample'
-import MainChartExample from './dashboard/MainChartExample'
-import SocialBoxChartExample from './dashboard/SocialBoxChartExample'
-import CalloutChartExample from './dashboard/CalloutChartExample'
+
 import { Callout } from '../components/'
 
 export default {
   name: 'dashboard',
   components: {
-    Callout,
-    CardLine1ChartExample,
-    CardLine2ChartExample,
-    CardLine3ChartExample,
-    CardBarChartExample,
-    MainChartExample,
-    SocialBoxChartExample,
-    CalloutChartExample
+    Callout
   },
   data: function () {
     return {
