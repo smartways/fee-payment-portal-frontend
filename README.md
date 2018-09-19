@@ -1,6 +1,4 @@
-# core-ui
 
-> Open Source Admin Template
 
 ## Build Setup
 
